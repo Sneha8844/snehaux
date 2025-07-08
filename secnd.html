@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grovia App Case Study - Process</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #001709;
+      color: #fffff6;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+  .stage-tab {
+  background-color: #0B251E;
+  border: 1px solid #00b36b;
+  color: #fffff6;
+  border-radius: 2rem;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.stage-tab:hover,
+.stage-tab.active {
+  background-color: #00b36b;
+  color: #001709;
+  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
+}
+
+  .dashboard-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    background-color: #001709;
+  }
+
+  .dashboard-img {
+    max-width: 50%;
+    border-radius: 0.5rem;
+  }
+
+    .process-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    .stage-count {
+      font-size: 2rem;
+      color: #00b36b; /* Soft green */
+    }
+
+    .card-custom {
+      background: #0B251E;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      color: #fffff6;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-custom::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80px;
+      height: 80px;
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 0 0 100% 0;
+      z-index: 0;
+    }
+
+    .card-highlight {
+      background: rgba(0, 179, 107, 0.3);
+      border: 1px solid rgba(0, 179, 107, 0.5);
+    }
+
+    .card-custom > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+    }
+
+    .step-number {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .step-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .step-description {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container py-5">
+    
+    <div class="text-center mb-5">
+      <div class="d-flex justify-content-center mb-4 flex-wrap gap-2">
+  <button class="btn stage-tab active">Research</button>
+  <button class="btn stage-tab">Ideation</button>
+  <button class="btn stage-tab">Defining</button>
+  <button class="btn stage-tab">Wireframing</button>
+  <button class="btn stage-tab">Prototyping</button>
+  <button class="btn stage-tab">Testing</button>
+  <button class="btn stage-tab">Final Design</button>
+</div>
+
+      <div class="process-title">PROCESS</div>
+      <div class="stage-count">4 Stages</div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card-custom h-100">
+          <div class="step-number">1/4</div>
+          <div class="step-title">Research</div>
+          <div class="step-description">
+            Understanding shopping behaviors, competitor analysis, problem statements, forming user journeys, and wireframes.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-custom card-highlight h-100">
+          <div class="step-number">2/4</div>
+          <div class="step-title">User Interface</div>
+          <div class="step-description">
+            Visual design, UI components, high-fidelity wireframes, interactive prototype, design polish.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-custom h-100">
+          <div class="step-number">3/4</div>
+          <div class="step-title">Development</div>
+          <div class="step-description">
+            Frontend integration, system structure, responsive views, documentation, and handoff.
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card-custom h-100">
+          <div class="step-number">4/4</div>
+          <div class="step-title">Testing & Support</div>
+          <div class="step-description">
+            Usability testing, design feedback, bug fixes, post-launch updates, and improvements.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-wrapper row mx-0">
+  <div class="col-12 col-md-9 mb-3 mb-md-0">
+    <img class="img-fluid w-100 rounded" src="research diagram.png" alt="User Research Insights Dashboard">
+  </div>
+  <div class="col-12 col-md-3">
+    <img class="img-fluid w-100 rounded" src="img space.png" alt="Supporting Visual">
+  </div>
+</div>
+
+  </div>
+</body>
+</html>

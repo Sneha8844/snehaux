@@ -6,295 +6,11 @@
   <title>Grovia App Case Study - Process</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-  <style>
-    body {
-      background-color: #000f06;
-      color: #fffff6;
-      font-family: 'Segoe UI', sans-serif;
-    }
-    
-  .stage-tab {
-  background-color: #0B251E;
-  border: 1px solid #00b36b;
-  color: #fffff6;
-  border-radius: 2rem;
-  padding: 0.4rem 1.2rem;
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.section-spacing {
-  margin-top: 4rem;
-  margin-bottom: 1.5rem;
-}
-
-.stage-tab:hover,
-.stage-tab.active {
-  background-color: #00b36b;
-  color: #001709;
-  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
-}
-
-  .dashboard-wrapper {
-    display: flex;
-    justify-content: center;
-    padding: 2rem 0;
-    background-color: #001709;
-  }
-
-  .dashboard-img {
-    max-width: 50%;
-    border-radius: 0.5rem;
-  }
-
-    .process-title {
-      font-size: 2.5rem;
-      font-weight: 600;
-    }
-
-    .stage-count {
-      font-size: 2rem;
-      color: #00b36b; /* Soft green */
-    }
-
-    .card-custom {
-      background: #0B251E;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      color: #fffff6;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .card-custom::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 80px;
-      height: 80px;
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 0 0 100% 0;
-      z-index: 0;
-    }
-
-    .card-highlight {
-      background: rgba(0, 179, 107, 0.3);
-      border: 1px solid rgba(0, 179, 107, 0.5);
-    }
-
-    .card-custom > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .card-custom:hover {
-      transform: translateY(-5px);
-    }
-
-    .step-number {
-      font-size: 1rem;
-      font-weight: 400;
-    }
-
-    .step-title {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
-
-    .step-description {
-      font-size: 0.95rem;
-      opacity: 0.85;
-      line-height: 1.5;}
-
-.custom-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgba(40, 40, 40, 0.4); /* Match carousel */
-  color: #dddddd;
-  font-size: 0.75rem;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.custom-table th,
-.custom-table td {
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Softer glassy border */
-  background-color: rgba(20, 20, 20, 0.25); /* Glass cell */
-  color: #dad9ce;
-  padding: 0.6rem 0.75rem;
-  vertical-align: top;
-}
-
-.custom-table th {
-  background-color: rgba(0, 20, 10, 0.6); /* Header glass tone */
-  color: #e6e5dd;
-  font-weight: 600;
-  text-align: center;
-}
-
-.custom-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.custom-table ul {
-  padding-left: 1rem;
-  margin: 0;
-}
-
-.carousel-container {
-  display: flex;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-.carousel-container::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-item-glass {
-  min-width: 300px;
-  max-width: 340px;
-  min-height: 120px;
-  background: rgba(40, 40, 40, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 12px;
-  padding: 1rem;
-  color: #dddddd;
-  font-size: 0.88rem;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: transform 0.3s ease;
-  flex-shrink: 0;
-  position: relative;
-}
-.carousel-item-glass:hover {
-  transform: scale(1.03);
-}
-
-
-.link-icon:hover i {
-  color: #00ff99;
-}
-
-.link-icon i {
-  color: #00b36b;
-  font-size: 1.5rem;
-  text-decoration: none;
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-}
-
-.carousel-instruction {
-  font-size: 0.9rem;
-  color: #00b36b;
-  text-align: right;
-  margin: 0.3rem 0 1rem 0.3rem;
-}
-
-.disclaimer-text {
-  color: #cccccc;
-  font-style: italic;
-}
-
-@media (min-width: 728px) and (max-width: 903.98px) {
-  .responsive-style {
-    margin-top: 1.95em;
-    letter-spacing: -0.016em;
-    line-height: 30px;
-    font-size: 24px;
-    margin-bottom: -0.28em;
-    font-weight: 600;
-  }
-}
-
-.subsection-title {
-  font-size: 1.5rem;
-  color: #66ffcc;
-  font-weight: 600;
-  margin-top: 4.0rem;
-  margin-bottom: 1.0rem;
-}
-
-.glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 1.5rem;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease-in-out;
-}
-
-.glass-card h2 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: #222;
-}
-
-.glass-card h5 {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-top: 1.5rem;
-  color: #444;
-}
-
-.glass-card ul {
-  padding-left: 1.2rem;
-  list-style-type: disc;
-}
-
-.glass-card p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Collapsible */
-.toggle-btn {
-  background-color: #fff;
-  border: 1px solid #ccc;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.toggle-btn:hover {
-  background-color: #f0f0f0;
-}
-
-.collapsible-content {
-  display: none;
-  animation: fadeIn 0.3s ease-in-out;
-}
-
-.collapsible-content.open {
-  display: block;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-
-  </style>
 </head>
 <body>
+  <main>
   <div class="container py-5">
     
     <div class="text-center mb-5">
@@ -340,34 +56,36 @@
         </div>
       </div>
     </div>
+    
 
-<div class="text-center mb-5 section-spacing">
-    <div class="d-flex justify-content-center mb-4 flex-wrap gap-2">
-  <button class="btn stage-tab active">Understand</button>
-  <button class="btn stage-tab">Define</button>
-  <button class="btn stage-tab">Ideate</button>
-  <button class="btn stage-tab">Structure</button>
-  <button class="btn stage-tab">Design</button>
-  <button class="btn stage-tab">Test</button>
-  <button class="btn stage-tab">Final Output</button>
-</div>
+<div class="text-center mb-5 section-spacing sticky-stage-tabs">
+  <div class="d-flex justify-content-center mb-4 flex-wrap gap-2" id="stageTabs">
+    <button class="btn stage-tab active" data-section="research">Understand</button>
+    <button class="btn stage-tab" data-section="define">Define</button>
+    <button class="btn stage-tab" data-section="ideate">Ideate</button>
+    <button class="btn stage-tab" data-section="structure">Structure</button>
+    <button class="btn stage-tab" data-section="design">Design</button>
+    <button class="btn stage-tab" data-section="test">Test</button>
+    <button class="btn stage-tab" data-section="output">Final Output</button>
+  </div>
 </div>
 
+<section id="research">
   <div class="mb-5">
   <h1 class="text-success fw-bold mb-3 section-spacing text-center">RESEARCH</h1>
 <p class="small disclaimer-text mb-3">
   Disclaimer: Since this is a prompt from my Google UX Certification course, it’s a hypothetical case. I referred to Google and other websites to do the secondary research. For the primary research, I visited a local store near my hometown that’s similar to the one I’m designing, to interact with real shoppers.
 </p>
 <h2 class="responsive-style section-spacing">SECONDARY RESEARCH</h2>
-<p class="small text-light mb-4">
+<p class=" text-light mb-4">
   Also known as desk research. I think this stage is crucial to understand the field, spot gaps and learn about real pain points  people facing during an instore grocery shopping. Since, i have limitations to do expensive/ time-consuming research processes. This gives real insights rather than assuming. I collected data’s relevant to the context. Here’s what i found:
 </p>
 <h3 class="subsection-title ">Contextual Insights</h3>
-<p class="small text-light mb-4">
+<p class=" text-light mb-4">
   I went through some academic studies, market reports, expert articles, and user discussions to identify common pain points and behaviors within the grocery space.
 </p>
 
-<ul class="small text-light mb-4" style="list-style-type: disc; padding-left: 1.5rem;">
+<ul class=" text-light mb-4" style="list-style-type: disc; padding-left: 1.5rem;">
   <li>
     <strong>Quantitative data:</strong>  Stats, surveys, market growth reports,..
   </li>
@@ -376,7 +94,7 @@
   </li>
 </ul>
 
-<p class="small text-light mb-4">
+<p class=" text-light mb-4">
   Through this step, I gained a better understanding of the current retail landscape and shopper psychology.
 </p>
  
@@ -426,10 +144,6 @@
       <a href="https://www.powerreviews.com/modern-grocery-shopper/?" target="_blank" class="link-icon"><i class="bi bi-link-45deg"></i></a>
     </div>
     <div class="carousel-item-glass">
-      Indoor mapping apps like Aisle411 have proven to guide shoppers aisle-by-aisle using barcodes and inventory data.
-      <a href="https://en.m.wikipedia.org/wiki/Aisle411?" target="_blank" class="link-icon"><i class="bi bi-link-45deg"></i></a>
-    </div>
-    <div class="carousel-item-glass">
       Layout optimization using algorithmic models can reduce congestion and improve visibility.
       <a href="https://arxiv.org/abs/2105.09299?" target="_blank" class="link-icon"><i class="bi bi-link-45deg"></i></a>
     </div>
@@ -449,7 +163,7 @@
 </div>
 
 <h3 class="subsection-title ">Competitive Analysis</h3>
-<p class="small text-light mb-4">
+<p class=" text-light mb-4">
   After exploring blogs and reports, I explored a few similar apps, checked out their features, read user reviews to see how they approach in-store navigation and grocery shopping. This helped me get a clearer idea of what’s already working and more importantly, what users still need. Here's what I found.
 </p>
 
@@ -568,7 +282,7 @@
     </tbody>
   </table>
 </div>
-<p class="small text-light mb-4 section-spacing">
+<p class="text-light mb-4 section-spacing">
   While I gathered some useful takeaways from these apps, most of them were international, mainly from the U.S. 
 
 Unfortunately, I couldn’t find any Indian apps with similar in-store navigation features to explore or review firsthand.
@@ -579,68 +293,121 @@ These insights gave me a good starting point and helped shape the next step: tal
 </p>
 
 <h2 class="responsive-style section-spacing">PRIMARY RESEARCH</h2>
-  <section class="glass-card my-5 px-4 py-4">
-  <h2 class="responsive-style section-spacing text-center mb-4">PRIMARY RESEARCH</h2>
+<p>
+  To understand the real people behind the problem, I visited a local grocery store in my hometown and talked directly with 9 shoppers. I chose this store, since it closely resembled the type of store my app is targeting, in terms of layout, scale, and shopper flow.
+</p>
 
-  <!-- Collapsible Toggle Button -->
-  <button class="toggle-btn mb-3" onclick="toggleContent(this)">▼ Show Details</button>
-  
-  <!-- Content to toggle -->
-  <div class="collapsible-content">
-    <div class="row mx-0">
-      <div class="col-12 col-md-9 mb-3 mb-md-0">
-        <img class="img-fluid w-100 rounded" src="research diagram.png" alt="User Research Insights Dashboard">
-      </div>
-      <div class="col-12 col-md-3">
-        <img class="img-fluid w-100 rounded" src="img space.png" alt="Supporting Visual">
-      </div>
-    </div>
+    <h3 class="subsection-title">On the Ground Research
+    </h3>
+    <p class=" text-light mb-4">
+      I didn’t have a strict target persona in mind — but I made sure to include a mix of people from different demographics:
+    </p>
+    <ul class=" text-light mb-4">
+      <li>Elderly shoppers</li>
+      <li>Busy working professionals</li>
+      <li>Young adults</li>
+      <li>People with visible mobility issues</li>
+    </ul>
 
-    <div class="mt-4">
-      <p><strong>To understand the real people behind the problem</strong>, I visited a local grocery store in my hometown and talked directly with 9 shoppers. I chose this store since it closely resembled the type of store my app is targeting — in terms of layout, crowd, and behavior patterns.</p>
+    <p class=" text-light mb-4">
+      I tried to avoid biases while choosing participants. I noticed people who looked like they might face a problem while shopping, and I approached them.
+    </p>
 
-      <h5 class="mt-4">👥 Who I Talked To</h5>
-      <ul>
-        <li>Elderly shoppers</li>
-        <li>Busy working professionals</li>
-        <li>Young adults</li>
-        <li>People with visible mobility challenges</li>
-      </ul>
-      <p>I didn’t have a strict target persona in mind — but I made sure to include a mix of people from different walks of life. I tried to avoid biases while choosing participants. I noticed people who looked like they might face a problem while shopping and approached them.</p>
+    <p class=" text-light mb-4">
+      I introduced myself and made my purpose clear to them, and asked for their permission. Obviously, some people declined to participate. But a few were ready to share their experiences, and I thanked them for their valuable time. I made it clear that there were no right or wrong answers, just honest experiences. I used my native language to make them feel more comfortable.
+    </p>
+    
+    <p class=" text-light mb-4">Based on these interactions, I mapped out key shopper traits and patterns.</p>
 
-      <p><em>(insert photo or illustration of interaction if you have one)</em></p>
-
-      <p>I introduced myself, made my purpose clear, and asked for permission. Some declined, but a few were open to sharing their experiences. I appreciated their time and made sure to let them know that there were no right or wrong answers — just honest experiences. I also used my native language to make them feel more comfortable.</p>
-
-      <h5 class="mt-4">🔍 What I Took Away</h5>
-      <p><em>(insert chart with description beneath it: “Interview Findings”)</em></p>
-      <ul>
-        <li>Beyond assumptions, I got a clear idea of how real shoppers think.</li>
-        <li>I have to come up with a solution that isn't just about maps or features — but about reducing stress and confusion.</li>
-        <li>Planning and availability are more critical than just locating items.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-  
-<div class="dashboard-wrapper row mx-0 mt-5">
-  <div class="col-12 col-md-9 mb-3 mb-md-0">
-    <img class="img-fluid w-100 rounded" src="research diagram.png" alt="User Research Insights Dashboard">
-  </div>
-  <div class="col-12 col-md-3">
-    <img class="img-fluid w-100 rounded" src="img space.png" alt="Supporting Visual">
-  </div>
+<div class="col-12 col-md-9 mb-3 mb-md-0 text-center">
+  <img class="img-fluid w-100 rounded" src="research diagram.png" alt="alt="Dashboard visualizing key insights from user research at local grocery store"
+">
+  <p class="small fst-italic mt-2" style="color: #aaa;">Findings from Research</p>
 </div>
 
-  </div>
 
-  <script>
-  function toggleContent(button) {
-    const content = button.nextElementSibling;
-    const isOpen = content.classList.toggle("open");
-    button.textContent = isOpen ? "▲ Hide Details" : "▼ Show Details";
-  }
-</script>
+
+<h3 class=" subsection-title">Key Learnings</h3>
+<p>Beyond assumptions, i got a clear idea of how real shoppers think. These are the common pain points i noted</p>
+    <ul class="small text-light mb-4">
+      <li>Shoppers feel overwhelmed by long aisles, especially when in a rush.</li>
+      <li>They plan in advance but still end up missing items.</li>
+      <li>Some rely on staff, but not everyone is comfortable doing that.</li>
+      <li>Many avoid certain sections entirely.</li>
+      <li>Layout complexity, crowding and stock availability are major concerns</li>
+    </ul>
+
+    <p class=" text-light mb-4">
+      These real human struggles helped me realize — the solution isn’t just about maps or cool features. It’s about easing confusion, planning better, and making shopping feel less like a chore.
+    </p>
+
+</section>
+
+<section id="define">
+
+  <h1 class="text-success fw-bold mb-3 section-spacing text-center">DEFINE</h1>
+
+  <p class="small fst-italic text-center mb-5" style="color: #aaa;">Shaping clear direction from user insights</p>
+
+  <h2 class="responsive-style section-spacing">AFFINITY MAP</h2>
+
+<p class="text-light mb-4">
+  After gathering rich insights from both secondary and primary research, I organized my findings into an Affinity Map using FigJam. This helped me group similar observations and identify recurring patterns in shopper behavior and pain points. The goal was to move from scattered observations to clear, actionable design directions.
+</p>
+
+<div class="text-center mb-4">
+  <img src="affinity map.png" alt="Affinity Map from Research Findings" class="img-fluid rounded">
+  <p class="small fst-italic mt-2" style="color: #aaa;">Affinity mapping helped in finding key pain points and behavior patterns</p>
+</div>
+
+<h2 class="responsive-style section-spacing">EMPATHY MAP</h2>
+
+<p class="text-light mb-4">
+   Using the themes from the affinity map, I created an empathy map to step into the user's sheos and better understand their mindset, motivations, and frustrations.  
+</p>
+
+<div class="text-center mb-4">
+  <img src="affinity map.png" alt="Affinity Map from Research Findings" class="img-fluid rounded">
+  <p class="small fst-italic mt-2" style="color: #aaa;">Affinity mapping helped in finding key pain points and behavior patterns</p>
+</div>
+
+<h3 class="subsection-title">Key Patterns Identified</h3>
+<ul class="text-light mb-4">
+  <li>Shoppers often feel overwhelmed by long or poorly organized aisles</li>
+  <li>Planning helps, but many still forget or miss items</li>
+  <li>Store layouts and wayfinding are major barriers to smooth shopping</li>
+  <li>Assistance from staff is helpful but not always accessible</li>
+  <li>Users want more independence and control in-store</li>
+</ul>
+
+<h2 class="responsive-style section-spacing">USER PERSONA</h2>
+<p class="text-light mb-4">
+  Based on the research, I created a representative persona to help guide decisions moving forward.
+</p>
+
+<div class="text-center mb-4">
+  <img src="user-persona.png" alt="User Persona" class="img-fluid rounded">
+  <p class="small fst-italic mt-2" style="color: #aaa;">Persona created from real user traits and shopping behaviors</p>
+</div>
+
+<h2 class="responsive-style section-spacing">PROBLEM STATEMENT</h2>
+<div class="glass-card">
+  <p class="glass-text">
+    Shoppers in large grocery stores often struggle to navigate the space efficiently, leading to stress, missed items, and a poor shopping experience. There’s a need for a simple, intuitive way to help them plan and move through the store with ease.
+  </p>
+</div>
+
+
+
+</section>
+
+</div>
+</main>
+<footer class="footer mt-auto py-3 text-center">
+  <p class="mb-0">&copy; <span id="year"></span>2025 Sneha Babu | UX Designer</p>
+</footer>
+  
+<script src="script.js"> </script>
 
 </body>
 </html>

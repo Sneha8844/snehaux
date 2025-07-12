@@ -3,21 +3,46 @@ body {
       color: #fffff6;
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0 2rem;
+      padding: 0 1rem;
     }
 
-.px-4 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+.sticky-stage-tabs {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #000f06;
+  padding: 1rem 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
-.px-md-5 {
-  padding-left: 3rem;
-  padding-right: 3rem;
+
+.tab-scroll-container {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding: 0 1rem;
+  max-width: 100%;
 }
-.sticky-stage-tabs.section-spacing {
-  margin-top: 0 !important;
-  margin-bottom: 0rem; 
-  padding-top: 0.5rem; 
+
+.tab-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+#stageTabs {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  min-width: max-content;
+}
+
+@media (min-width: 768px) {
+  .tab-scroll-container {
+    justify-content: center;
+    overflow-x: visible;
+  }
 }
 
 .stage-tab {
@@ -34,14 +59,6 @@ body {
 .section-spacing {
   margin-top: 4rem;
   margin-bottom: 2rem;
-}
-
-.sticky-stage-tabs {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #000f06;
-  padding: 1rem 0;
 }
 
 .stage-tab:hover,
@@ -180,15 +197,15 @@ body {
 }
 
 .carousel-item-glass {
-  min-width: 300px;
-  max-width: 340px;
-  min-height: 120px;
+  min-width: 200px;
+  max-width: 240px;
+  min-height: 180px;
   background: rgba(40, 40, 40, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   padding: 1rem;
   color: #dddddd;
-  font-size: 0.88rem;
+  font-size: 0.78rem;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   transition: transform 0.3s ease;

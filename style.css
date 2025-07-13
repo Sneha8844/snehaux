@@ -149,7 +149,6 @@ body {
   width: 100%;
   border-collapse: collapse;
   background: rgba(40, 40, 40, 0.4); /* Match carousel */
-  color: #dddddd;
   font-size: 0.6rem;
   table-layout: fixed;
   backdrop-filter: blur(6px);
@@ -165,7 +164,7 @@ body {
   color: #dad9ce;
   padding: 0.4rem 0.6rem;
   vertical-align: top;
-  word-wrap: break-word;
+  word-break: break-word;
 }
 
 .custom-table th {
@@ -185,6 +184,36 @@ body {
   padding-left: 1rem;
   margin: 0;
 }
+
+/* ✅ MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .custom-table {
+    font-size: 0.5rem;
+  }
+
+  .custom-table th,
+  .custom-table td {
+    padding: 0.3rem 0.4rem;
+  }
+
+  .custom-table th {
+    font-size: 0.55rem;
+  }
+
+  .custom-table ul {
+    padding-left: 0.8rem;
+  }
+
+  .custom-table thead th {
+    white-space: nowrap;
+  }
+
+  .table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 
 .carousel-container {
   display: flex;
@@ -280,6 +309,46 @@ body {
   margin: 0;
 }
 
+.empathy-map-container {
+  background: transparent;
+}
+
+.empathy-box {
+  background: rgba(20, 20, 20, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 255, 170, 0.05);
+  color: #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.empathy-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 24px rgba(0, 255, 170, 0.08);
+}
+
+.empathy-box h5 {
+  color: #00ffb3;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.empathy-box ul {
+  padding-left: 1rem;
+  list-style: disc;
+}
+
+.empathy-box li {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
 
 html, body {
   height: 100%;

@@ -145,45 +145,6 @@ body {
       opacity: 0.85;
       line-height: 1.5;}
 
-.custom-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: rgba(40, 40, 40, 0.4); /* Match carousel */
-  font-size: 0.6rem;
-  table-layout: fixed;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.custom-table th,
-.custom-table td {
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Softer glassy border */
-  background-color: rgba(20, 20, 20, 0.25); /* Glass cell */
-  color: #dad9ce;
-  padding: 0.4rem 0.6rem;
-  vertical-align: top;
-  word-break: break-word;
-}
-
-.custom-table th {
-  background-color: rgba(0, 20, 10, 0.6); /* Header glass tone */
-  color: #e6e5dd;
-  font-weight: 600;
-  text-align: center;
-}
-
-.custom-table thead th {
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-
-.custom-table ul {
-  padding-left: 1rem;
-  margin: 0;
-}
 
 /* ✅ MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
@@ -348,6 +309,16 @@ body {
   margin-bottom: 0.75rem;
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.persona-img img {
+  max-width: 100% !important;
+}
+
+@media (max-width: 768px) {
+  .persona-img {
+    justify-content: center !important;
+  }
 }
 
 html, body {

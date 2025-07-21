@@ -4,7 +4,6 @@ document.addEventListener("DOMContentLoaded", () => {
     research: document.getElementById("research"),
     define: document.getElementById("define"),
     ideate: document.getElementById("ideate"),
-    structure: document.getElementById("structure"),
     design: document.getElementById("design"),
     test: document.getElementById("test"),
     output: document.getElementById("output")

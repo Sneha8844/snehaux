@@ -360,7 +360,7 @@ body {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 6px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 

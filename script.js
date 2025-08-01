@@ -11,26 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
   stageTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      const sectionId = tab.getAttribute("data-section");
-      const targetSection = sectionMap[sectionId];
+  const sectionId = tab.getAttribute("data-section");
+  const targetSection = sectionMap[sectionId];
 
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: "smooth",
-          block: "start"
-        });
+  if (targetSection) {
+    const offset = 100; // Adjust based on your sticky tab height
+    const topPos = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
 
-        stageTabs.forEach((t) => t.classList.remove("active"));
-        tab.classList.add("active");
+    window.scrollTo({ top: topPos, behavior: 'smooth' });
 
-        // Center the active tab horizontally (mobile fix)
-        tab.scrollIntoView({
-          behavior: "smooth",
-          inline: "center",
-          block: "nearest"
-        });
-      }
-    });
+    stageTabs.forEach((t) => t.classList.remove("active"));
+    tab.classList.add("active");
+
+    // Center the tab horizontally
+    tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+  }
+});
+
   });
 
   // Auto-highlight and center tab based on scroll
@@ -45,7 +42,7 @@ window.addEventListener("scroll", () => {
     const sectionBottom = rect.bottom;
 
     
-    if (sectionTop <= 150 && sectionBottom > 150) {
+    if (sectionTop <= 120 && sectionBottom > 120) {
       currentSection = key;
     }
   });

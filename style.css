@@ -584,8 +584,6 @@ body {
 .design-images img {
   width: 100%;
   max-width: 200px;
-  border: 2px solid #00ffb3;
-  border-radius: 8px;
 }
 
 @media (max-width: 768px) {
@@ -638,8 +636,6 @@ body {
 .iteration-image img {
   width: 100%;
   max-width: 350px;
-  border: 2px solid #00ffb3;
-  border-radius: 8px;
 }
 
 .design-text {

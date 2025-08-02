@@ -283,7 +283,7 @@ window.addEventListener('scroll', () => {
 
 // Set year in footer
   document.getElementById("year").textContent = new Date().getFullYear();
-});
+
 
 // Optional toggle content for collapsibles (if used)
 function toggleContent(button) {
@@ -327,4 +327,6 @@ window.addEventListener('scroll', () => {
 // Scroll to top when clicked
 scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'instant' });
+});
+
 });

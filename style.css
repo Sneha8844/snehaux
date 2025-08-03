@@ -6,6 +6,22 @@ body {
       padding: 0 1rem;
     }
 
+/* SVG progress ring */
+.progress-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: rotate(-90deg);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.progress-ring__circle {
+  stroke-dasharray: 164;
+  stroke-dashoffset: 164;
+  transition: stroke-dashoffset 0.2s linear;
+}
+
 .bottom-spacing {
   margin-bottom: 2rem;
 }
@@ -155,7 +171,7 @@ body {
 .sticky-stage-tabs {
   position: sticky;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
   background-color: #000f06;
   padding: 1rem 0;
   width: 100%;
@@ -207,10 +223,10 @@ body {
 @media (max-width: 480px) {
   .stage-tab {
     font-size: 0.65rem;
-    padding: 0.6rem 0.5rem;
+    padding: 0.7rem 0.57rem;
   }
   #stageTabs {
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 }
 
@@ -851,17 +867,3 @@ body {
   opacity: 1;
 }
 
-/* SVG progress ring */
-.progress-ring {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: rotate(-90deg);
-  z-index: 1;
-}
-
-.progress-ring__circle {
-  stroke-dasharray: 164;
-  stroke-dashoffset: 164;
-  transition: stroke-dashoffset 0.2s linear;
-}

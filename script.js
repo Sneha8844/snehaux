@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tab.classList.add("active");
 
         // Center the active tab horizontally (mobile fix)
-    //    tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest"});
+//    tab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest"});
       }
     });
   });

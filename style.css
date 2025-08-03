@@ -159,14 +159,15 @@ body {
   background-color: #000f06;
   padding: 1rem 0;
   width: 100%;
-  margin-left: auto;
+   margin-left: auto;
   margin-right: auto;
 }
 
 .tab-scroll-container {
   display: flex;
-  justify-content: center;
-  overflow-x: hidden; /* Remove scroll */
+  overflow-x: auto; /* allow scroll */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
   padding: 0 1rem;
   max-width: 100%;
 }
@@ -175,7 +176,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping */
   justify-content: center;
-  gap: 0.4rem;
+  gap: 1rem;
   width: 100%;
 }
 
@@ -183,8 +184,8 @@ body {
   background-color: #0B251E;
   border: 1px solid #00b36b;
   color: #fffff6;
-  border-radius: 2rem;
-  padding: 0.4rem 0.9rem;
+  border-radius: 0.5rem;
+  padding: 0.7rem 0.6rem;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
@@ -198,15 +199,42 @@ body {
 @media (max-width: 768px) {
   .stage-tab {
     font-size: 0.8rem;
-    padding: 0.35rem 0.8rem;
+    padding: 0.6rem 0.8rem;
   }
+
 }
 
 @media (max-width: 480px) {
   .stage-tab {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.6rem;
+    font-size: 0.65rem;
+    padding: 0.6rem 0.5rem;
   }
+  #stageTabs {
+  gap: 0.4rem;
+}
+}
+
+.tab-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .tab-scroll-container {
+    justify-content: center;
+    overflow-x: visible;
+  }
+}
+
+.stage-tab:hover{
+  background-color: #1d312b;
+  border: 1px solid #00b36b;
+  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
+}
+
+.stage-tab.active {
+  background-color: #00b36b;
+  color: #001709;
+  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
 }
 
 /*
@@ -239,29 +267,6 @@ body {
 }
 
 */
-
-.tab-scroll-container::-webkit-scrollbar {
-  display: none;
-}
-
-@media (min-width: 768px) {
-  .tab-scroll-container {
-    justify-content: center;
-    overflow-x: visible;
-  }
-}
-
-.stage-tab:hover{
-  background-color: #1d312b;
-  border: 1px solid #00b36b;
-  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
-}
-
-.stage-tab.active {
-  background-color: #00b36b;
-  color: #001709;
-  box-shadow: 0 2px 8px rgba(0, 179, 107, 0.3);
-}
 
   .dashboard-wrapper {
     display: flex;

@@ -45,6 +45,18 @@ body {
     padding: 0 1rem; /* Reduce padding on smaller screens */
   }
 }
+
+/*logo responsive */
+.logo-img {
+  max-width: 200px;
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    max-width: 120px;
+  }
+}
+
 /*intro section*/
 .hero-section {
       display: flex;

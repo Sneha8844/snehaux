@@ -504,13 +504,13 @@ body {
 .subsection-title {
   display: inline-block;
   background: linear-gradient(to right, #00b36b, #42db9e);
-  -webkit-background-clip: text;
+  background-clip: text; /* Standard property */
+  -webkit-background-clip: text; /* Vendor-prefixed for Safari */
   -webkit-text-fill-color: transparent;
   font-weight: 500;
   margin-top: 5rem;
   margin-bottom: 1rem;
 }
-
 
 .glass-card {
   background: rgba(71, 83, 69, 0.1);
